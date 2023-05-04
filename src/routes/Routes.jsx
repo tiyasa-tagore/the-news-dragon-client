@@ -13,12 +13,12 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Category></Category>,
-                loader: () => fetch(`http://localhost:5000/news`),
+                loader: ({params}) => fetch(`https://the-news-dragon-server-tiyasa-tagore.vercel.app/categories`)
             },
             {
                 path: '/category/:id',
                 element: <Category></Category>,
-                loader: ({params})=>fetch(`http://localhost:5000/categories/${params.id}`)
+                loader: ({params})=>fetch(`https://the-news-dragon-server-tiyasa-tagore.vercel.app/categories/${params.id}`)
             },
         ]
     },
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
             {
                 path:':id',
                 element: <News></News>,
-                loader: ({params})=> fetch(`http://localhost:5000/news/${params.id}`)
+                loader: ({params})=> fetch(`https://the-news-dragon-server-tiyasa-tagore.vercel.app/news/${params.id}`)
 
             }
         ]
