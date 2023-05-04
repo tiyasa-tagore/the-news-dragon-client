@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import logo from '../../../assets/logo.png'
 import moment from 'moment';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar} from 'react-bootstrap';
 import Marquee from "react-fast-marquee";
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../../providers/AuthProvider';
 import { FaUserCircle } from 'react-icons/fa';
+import { AuthContext } from '../../../providers/AuthProvider';
+
 
 
 const Header = () => {
@@ -38,11 +39,11 @@ const Header = () => {
            
           </Nav>
           <Nav>
-            {user && <Nav.Link href="#deets">
+             <Nav.Link href="#deets">
                 <FaUserCircle style={{fontSize: '2rem'}}>
 
                 </FaUserCircle>
-            </Nav.Link>}
+            </Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
             {
                 user ?
